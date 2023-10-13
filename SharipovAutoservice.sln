@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharipovAutoservice", "SharipovAutoservice.csproj", "{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Debug|x86.ActiveCfg = Debug|x86
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Debug|x86.Build.0 = Debug|x86
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Release|x86.ActiveCfg = Release|x86
+		{8433DB62-356E-4655-B1EA-52B2BFB6FDCE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFDEAD2F-F23F-4DAE-BCA7-3B1F39A687D4}
+	EndGlobalSection
+EndGlobal
