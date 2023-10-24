@@ -51,7 +51,7 @@ namespace SharipovAutoservice
             try
             {
                 Sharipov_autoserviceEntities.GetContext().SaveChanges();
-                MessageBox.Show("информация не сохранена");
+                MessageBox.Show("информация сохранена");
                 Manager.MainFrame.GoBack();
             }
             catch (Exception ex)    
