@@ -89,56 +89,62 @@
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClientService.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="client_a_import.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DocumentByService.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Gender.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="Manufacturer.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductPhoto.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductSale.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServicePhoto.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Sharipovmodel.Context.cs">
+    <Compile Include="SharipovModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Sharipovmodel.Context.tt</DependentUpon>
+      <DependentUpon>SharipovModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Sharipovmodel.cs">
+    <Compile Include="SharipovModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Sharipovmodel.Designer.cs">
+    <Compile Include="SharipovModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Sharipovmodel.edmx</DependentUpon>
+      <DependentUpon>SharipovModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>Sharipovmodel.tt</DependentUpon>
+      <DependentUpon>SharipovModel.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -157,6 +163,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,12 +194,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="Sharipovmodel.edmx">
+    <EntityDeploy Include="SharipovModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Sharipovmodel.Designer.cs</LastGenOutput>
+      <LastGenOutput>SharipovModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Sharipovmodel.edmx.diagram">
-      <DependentUpon>Sharipovmodel.edmx</DependentUpon>
+    <None Include="SharipovModel.edmx.diagram">
+      <DependentUpon>SharipovModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -234,15 +244,17 @@
     <Resource Include="Услуги автосервиса\Электрика.png" />
     <Resource Include="diz.jpg" />
     <Resource Include="rulevoe-upravlenie-avtomobilya.jpg" />
-    <Content Include="Sharipovmodel.Context.tt">
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SharipovModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Sharipovmodel.edmx</DependentUpon>
-      <LastGenOutput>Sharipovmodel.Context.cs</LastGenOutput>
+      <DependentUpon>SharipovModel.edmx</DependentUpon>
+      <LastGenOutput>SharipovModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Sharipovmodel.tt">
+    <Content Include="SharipovModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Sharipovmodel.edmx</DependentUpon>
-      <LastGenOutput>Sharipovmodel.cs</LastGenOutput>
+      <DependentUpon>SharipovModel.edmx</DependentUpon>
+      <LastGenOutput>SharipovModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

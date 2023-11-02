@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-//using SharipovAutoservice;
 
 namespace SharipovAutoservice
 {
@@ -35,29 +34,49 @@ namespace SharipovAutoservice
             StringBuilder errors = new StringBuilder();
             if (string.IsNullOrWhiteSpace(_currentServise.Title))
                 errors.AppendLine("Укажите название услуги");
-            if (_currentServise.Cost == 0)
+            if (_currentServise.Cost <= 0)
                 errors.AppendLine("Укажите стоимость услуги");
             if (string.IsNullOrWhiteSpace(Convert.ToString(_currentServise.Discount)))
                 errors.AppendLine("Укажите скидку");
-            if (string.IsNullOrWhiteSpace(_currentServise.DurationInSeconds))
+            if (_currentServise.DurationIn <= 0)
                 errors.AppendLine("Укажите длительность услуги");
+            if (_currentServise.DurationIn > 240)
+                errors.AppendLine("Длительность не может быть больше 240 минут");            
 
+            /*for (int i = 0; i < allService.Count; i++)
+            {
+                if (ServiceTitle.Text == allService[i].ToString())
+                {
+                    errors.AppendLine("Услуга уже существует");
+                }
+            }*/
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (_currentServise.ID == 0)
-                Sharipov_autoserviceEntities.GetContext().Service.Add(_currentServise);
-            try
+
+            var allService = Sharipov_autoserviceEntities.GetContext().Service.ToList();
+            allService = allService.Where(p => p.Title == _currentServise.Title).ToList();
+
+            if (allService.Count == 0)
             {
-                Sharipov_autoserviceEntities.GetContext().SaveChanges();
-                MessageBox.Show("информация сохранена");
-                Manager.MainFrame.GoBack();
+                if (_currentServise.ID == 0)
+                    Sharipov_autoserviceEntities.GetContext().Service.Add(_currentServise);
+                try
+                {
+                    Sharipov_autoserviceEntities.GetContext().SaveChanges();
+                    MessageBox.Show("информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
-            catch (Exception ex)    
+            else
             {
-                MessageBox.Show(ex.Message.ToString());
+                MessageBox.Show("Данная услуга уже существует");
             }
         }
     }
