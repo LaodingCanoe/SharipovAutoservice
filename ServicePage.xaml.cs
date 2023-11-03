@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace SharipovAutoservice
 {
     /// <summary>
@@ -20,6 +22,9 @@ namespace SharipovAutoservice
     /// </summary>
     public partial class ServicePage : Page
     {
+
+        public bool a = false;
+
         int CountRecords;
         int CountPage;
         int CurrentPage = 0;
@@ -171,14 +176,15 @@ namespace SharipovAutoservice
             ChangePage(0, 0);
         }
 
-       
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
+            a = false;
             Manager.MainFrame.Navigate(new AddEditPage(null));
         }
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
+            a = true;
             Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Service));
         }
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
